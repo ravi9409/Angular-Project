@@ -1,0 +1,7 @@
+<!--<label>Server Name</label>-->
+<!--Two way databinding example in line 3 and 4-->
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)" >-->
+<!--<input type="text" class="form-control"  [(ngModel)]="serverName">-->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()" >Add Server</button>
+<h2>{{serverCreationStatus}}</h2>
+<h3>{{serverName}}</h3>
