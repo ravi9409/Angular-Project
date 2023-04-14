@@ -8,3 +8,6 @@
   <p>Using else condition</p>
 </ng-template>
 <h2>{{serverCreationStatus}}</h2>
+<h2 [ngStyle]="{backgroundColor:serverStatus=='online'?'green':'red'}"
+[ngClass]="{online:serverStatus==='online'}"
+>Server status is {{serverStatus}}</h2>
