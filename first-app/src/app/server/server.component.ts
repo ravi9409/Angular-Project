@@ -3,9 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
-  styles: [`.online{
-  color:white;
-  }`]
+  styleUrls:['./server.component.css']
+
 })
 export class ServerComponent implements OnInit {
   allowNewServer:boolean=true;
@@ -13,6 +12,9 @@ export class ServerComponent implements OnInit {
   serverName='Name1';
   serverStatus:string='';
   serverCreated=true;
+  paragraphShow:boolean=true;
+  counterArray=[];
+  counter:number=0;
   constructor() {
     this.serverStatus=Math.random()>0.5?'online':'offline';
     setTimeout(()=>{
@@ -30,5 +32,12 @@ export class ServerComponent implements OnInit {
 
   onUpdateServerName(event:any){
   this.serverName=event.target.value;
+  }
+  toggleFlag(){
+    this.paragraphShow=!this.paragraphShow;
+  }
+  incrementCounter(){
+
+    this.counterArray.push(this.counter++);
   }
 }

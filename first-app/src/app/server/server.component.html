@@ -11,3 +11,8 @@
 <h2 [ngStyle]="{backgroundColor:serverStatus=='online'?'green':'red'}"
 [ngClass]="{online:serverStatus==='online'}"
 >Server status is {{serverStatus}}</h2>
+<button (click)="[toggleFlag(),incrementCounter()]">Display Details</button>
+<p *ngIf="paragraphShow">Secret Password=tuna</p>
+<div *ngFor="let i of counterArray" [ngStyle]="{backgroundColor:i>5?'green':'white'}"
+[ngClass]="{'white-text':i>5}"
+>{{i}}</div>
