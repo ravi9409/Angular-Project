@@ -27,4 +27,8 @@ export class AppComponent {
       content: bluePrintData.serverContent
     });
   }
+
+  onChange(){
+  this.serverElements[0].name='Changed!';
+  }
 }
